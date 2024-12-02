@@ -7,7 +7,7 @@ public class Assemble {
         int oddcount = 0;
         boolean overflow = false;
 
-        // Calculate negsum
+        // Process the array
         for (int i = 0; i < size; ++i) {
             if (X[i] < 0) {
                 negsum += X[i];
