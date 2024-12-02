@@ -55,9 +55,8 @@ ELSE
 	ADD	R6,R6,R4	; ++pzcount
 
 ; if ((X[i] & 1) != 0)
-IF2	DIV	R0,R1,R4	; X[i] % 2, load the value to R15
-	CMPEQ	R4,R15,R0	; Check if X[i] % 2 == 0
-	JUMPT	R4,IFEND2[R0]	; Jump to IFEND2 if not no overflow if negsum < 0
+IF2	AND	R4,R1,R4	; Check if X[i] & 1 != 0
+	JUMPF	R4,IFEND2[R0]	; Jump to IFEND2 if X[i] is not odd
 
 ; ++oddcount
 	LEA	R4,1[R0]	; Set R4 = 1
