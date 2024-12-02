@@ -1,6 +1,6 @@
 public class Assemble {
     public static void main(String[] args) {
-        int[] array = { 3, -6, 27, 101, 50, 0, -20, -21, 19, 6, 4, -10 };
+        int[] X = { 3, -6, 27, 101, 50, 0, -20, -21, 19, 6, 4, -10 };
         int size = 12;
         int negsum = 0;
         int pzcount = 0;
@@ -9,14 +9,14 @@ public class Assemble {
 
         // Calculate negsum
         for (int i = 0; i < size; ++i) {
-            if (array[i] < 0) {
-                negsum += array[i];
+            if (X[i] < 0) {
+                negsum += X[i];
                 if (negsum >= 0) {
                     overflow = true;
                 }
             } else {
                 ++pzcount;
-                if (array[i] % 2 != 0) {
+                if ((X[i] & 1) != 0) {
                     ++oddcount;
                 }
             }
