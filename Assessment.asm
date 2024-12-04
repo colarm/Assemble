@@ -37,7 +37,7 @@
 ; }
 
 
-; In this program: 
+; Register list: 
 ; R1 used to load elements in array X
 ; R2 stores the length of array X
 ; R3 stores loop counter (i)
